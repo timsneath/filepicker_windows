@@ -55,10 +55,10 @@ class _HomePageState extends State<HomePage> {
                           'All Files (*.*)': '*.*'
                         };
                         file.title = 'Select an image';
-                        final result = file.getFile();
+                        final result = file.getFiles();
                         if (result != null) {
                           setState(() {
-                            path = result;
+                            path = result.first;
                           });
                         }
                       },
